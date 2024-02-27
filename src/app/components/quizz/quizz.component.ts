@@ -20,9 +20,7 @@ export class QuizzComponent implements OnInit {
 
   finished:boolean = false
 
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
     if (quizz_questions) {
@@ -46,7 +44,7 @@ export class QuizzComponent implements OnInit {
     this.questionIndex += 1
 
     if (this.questionMaxIndex > this.questionIndex) {
-      this.questionSelected = this.questions[this.questionMaxIndex]
+      this.questionSelected = this.questions[this.questionIndex]
 
     } else {
       const finalAnswer:string = await this.checkResult(this.answers)
